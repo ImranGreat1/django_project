@@ -1,0 +1,13 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    {% for pdf in pdf_list %}
+      <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <small class="text-muted">{{ pdf.course}}</small>
+            </div>
+            <h2><a class="article-title" href="{{ pdf.pdf.url }}" target="_blank">{{ pdf.description }}</a></h2>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
